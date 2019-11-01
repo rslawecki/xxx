@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame - Serwis dla Bilardzistów i Snookerzystów</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <header class="head">
+        <img src="images/logo-white.png" alt="Flats4Rent Logo" class="logo">
+    </header>
+    <div class="background">
+      <div class="external">
+        <nav>
+          <div class="navbar">
+            <ul class="menu">
+              <li><a href="index.html">Strona Główna</a></li>
+              <li><a href="gry.html">Gry</a></li>
+              <li><a href="dodaj.html">Galeria</a></li>
+              <li><a href="ankieta.html">Ankieta</a></li>
+            </ul>
+          </div>
+        </nav>
+        <div id="main">
+          <h1 id="logo"></h1>
+          <h2>FRAME</h2>
+          <p>Jest to serwis stworzony z myślą o graczach szukających informacji o ciekawych wydarzeniach ze świata snookera i pool bilarda, pragnących rozwijać swoją pasję oraz zacieśniać więzi między członkami naszej społeczności.</p> 
+		      <p> Serwis ten będzie uzupełniany o nowe ogłoszenia użytkowników takie jak sprzedaż sprzętu czy szkoleń dla graczy na różnych poziomach oraz realcje z turniejów, a więc tabele wyników, zdjęcia, daty kolejnych spotkań, a także o dodatkowe funkcjonalności.</p><p>Ewentualne sugestie dotyczące rozwoju oraz zmian serwisu proszę przysyłać drogą mailową poprzez formularz umieszczony w lewym dolnym rogu strony.</p>  
+        </div>
+        <div class="clear"></div>
+          <form method="post" action="mailto:r_slawecki@wp.pl">
+            <fieldset id="contact">
+              <p class="form_text"><input type="text" name="sender" id="sender" value="Nadawca" onfocus="if(this.value==='Nadawca') this.value=''; " onblur=" if(this.value==='') this.value='Nadawca';" /></p>
+				      <p class="form_text"><input type="text" name="subjeckt" id="subjeckt" value="Temat" onfocus="if(this.value==='Temat')this.value='';" onblur="if(this.value==='')this.value='Temat';" /></p>	 
+				      <p class="form_textarea"><textarea rows="10" cols="30" name="content" id="content" onfocus="if(this.value==='Treść')this.value='';" onblur="if(this.value==='')this.value='Treść';">Treść</textarea></p>
+				      <p class="form_submit"><input type="submit" name="submit" id="submit" value="WYŚLIJ"/></p>
+            </fieldset>
+          </form>
+        </div>
+    </div>
+    <div id="footer">
+      <div class="external">
+        <ul class="menu">
+          <li><a href="index.html">Strona Główna</a></li>
+          <li><a href="gry.html">Gry</a></li>
+          <li><a href="dodaj.html">Galeria</a></li>
+          <li class="last"><a href="ankieta.html">Ankieta</a></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
