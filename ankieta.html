@@ -4,76 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frame - Serwis dla Bilardzistów i Snookerzystów</title>
-    <link rel="stylesheet" href="style/styl.css" type="text/css" />
-    <script type="text/javascript">
-			function zapisz() {localStorage.setItem(document.forms.formularz.nick.value, document.forms.formularz.platforma.value);}
-			function skasuj() {document.forms.formularz.data.value = localStorage.removeItem( document.forms.formularz.platforma.value );}
-			function wyswietl() {
-				var zawartosc = 'Znaleziono ' + localStorage.length + ' osób:\r\n';
-				for(var klucz in localStorage)
-					zawartosc += ( klucz + ' ' + localStorage.getItem( klucz ) + '\r\n' );
-				alert ( zawartosc );
- 			}
-		</script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
   </head>
   <body>
-    <div class="background">
-      <div class="external">
-        <div class="sidebar">
-          <ul class="menu">
-            <li><a href="index.html">Strona Główna</a></li>
-            <li><a href="gry.html">Gry</a></li>
-            <li><a href="dodaj.html">Galeria</a></li>
-            <li class="last"><a href="ankieta.html">Ankieta</a></li>
-          </ul>
-        </div>
-        <div id="main">
-          <h1>Ankieta</h1>
-          <form name="formularz" method="post"  action="mailto:r_slawecki@wp.pl">   
-            <p><input type="text" value="Nick" name='nick'  onfocus="if(this.value==='Nick')this.value='';" onblur="if(this.value==='')this.value='Nick';" required title="Wprowadź swój nick+" /></p>				
-            <p><input type="email" value="Email" name='adres' required title="Wprowadź e-mail" onfocus="if(this.value==='Email')this.value='';" onblur="if(this.value==='')this.value='Email';" /></p>				
-            <p>Wybierz swoją ulubioną platformę: </p>
-              <input type="radio" name="platforma" value="Playstation" checked /> Playstation
-              <input type="radio" name="platforma" value="Xbox"/> Xbox
-              <input type="radio" name="platforma" value="PC"/> PC
-            <p>Wybierz ulubiony gatunek gier: </p>
-              <select id="country" name="country">
-                <option value="a">Zręcznościowe</option>
-                <option value="b">Przygodowe</option>
-                <option value="c">RPG</option>
-                <option value="d">MMORPG</option>
-                <option value="e">Sportowe</option>
-                <option value="f">Logiczne</option>
-                <option value="g">Symulatory</option>
-              </select>
-                <p><input type="text" value="Wiek" pattern=".{1}|.{2}" onfocus="if(this.value==='Wiek')this.value='';" onblur="if(this.value==='')this.value='Wiek';" required title="Wprowadź wiek"/></p>
-                <p><input id="wyslij" type="submit" value="Wyślij" name="sub"></p>
-                <p><input id="wyslij1" type="button" value="Zapisz swoją platformę" name='wyslij' onclick="zapisz()"/></p>
-                <p><input id="wyslij2" type="button" value="Skasuj" name='wyslij' onclick="skasuj()"/></p>
-                <p><input id="wyslij3" type="button" value="Wyświetl graczy na danych plaformach" name='wyslij' onclick="wyswietl()"/></p>                       
-          </form>
-          <p></p>		
-        </div>	
-        <div class="clear"></div> 
-          <form method="post" action="mailto:r_slawecki@wp.pl">
-            <fieldset id="contact">
-              <p class="form_text"><input type="text" name="sender" id="sender" value="Nadawca" onfocus="if(this.value==='Nadawca')this.value='';" onblur="if(this.value==='')this.value='Nadawca';" /></p>
-				      <p class="form_text"><input type="text" name="subjeckt" id="subjeckt" value="Temat" onfocus="if(this.value==='Temat')this.value='';" onblur="if(this.value==='')this.value='Temat';" /></p>	 
-				      <p class="form_textarea"><textarea rows="10" cols="30" name="content" id="content" onfocus="if(this.value==='Treść')this.value='';" onblur="if(this.value==='')this.value='Treść';">Treść</textarea></p>
-				      <p class="form_submit"><input type="submit" name="submit" id="submit" value="WYŚLIJ"/></p>
-            </fieldset>
-          </form>
-        </div>
-      </div>
-      <div id="footer">
+    <div class="nav-margin">
+        <header>
+            <nav class="navbar">
+                <div class="row">
+                    <img src="images/logo-single-dark.png" alt="Logo" class="logo"/>
+                    <ul class="menu">
+                        <li><a href="main.html">Strona Główna</a></li>
+                        <li><a href="gry.html">Gry</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        <li><a href="turnieje.html">Turnieje</a></li>
+                        <li><a href="ogloszenia.html">Ogłoszenia</a></li>
+                        <li><a href="ankieta.html">Ankieta</a></li>
+                        <li><a href="index.html">Wyloguj</a></li>
+                      </ul>
+                </div>
+            </nav>
+        </header>
+      <div class="background">
         <div class="external">
-          <ul class="menu">
-            <li><a href="index.html">Strona Główna</a></li>
-            <li><a href="gry.html">Gry</a></li>
-            <li><a href="dodaj.html">Galeria</a></li>
-            <li class="last"><a href="ankieta.html">Ankieta</a></li>
-          </ul>
-          <div class="decorator"></div>
+            <div id="main">
+                <h2>ANKIETA</h2>
+                <form name="formularz" method="post"  action="mailto:r_slawecki@wp.pl">   
+                  <p><input type="text" value="Nick" name='nick'  onfocus="if(this.value==='Nick')this.value='';" onblur="if(this.value==='')this.value='Nick';" required title="Wprowadź swój nick+" /></p>				
+                  <p><input type="email" value="Email" name='adres' required title="Wprowadź e-mail" onfocus="if(this.value==='Email')this.value='';" onblur="if(this.value==='')this.value='Email';" /></p>				
+                  <p>Wybierz swoją ulubioną platformę: </p>
+                    <input type="radio" name="platforma" value="Playstation" checked /> Playstation
+                    <input type="radio" name="platforma" value="Xbox"/> Xbox
+                    <input type="radio" name="platforma" value="PC"/> PC
+                  <p>Wybierz ulubiony gatunek gier: </p>
+                    <select id="country" name="country">
+                      <option value="a">Zręcznościowe</option>
+                      <option value="b">Przygodowe</option>
+                      <option value="c">RPG</option>
+                      <option value="d">MMORPG</option>
+                      <option value="e">Sportowe</option>
+                      <option value="f">Logiczne</option>
+                      <option value="g">Symulatory</option>
+                    </select>
+                      <p><input type="text" value="Wiek" pattern=".{1}|.{2}" onfocus="if(this.value==='Wiek')this.value='';" onblur="if(this.value==='')this.value='Wiek';" required title="Wprowadź wiek"/></p>
+                      <p><input id="wyslij" type="submit" value="Wyślij" name="sub"></p>
+                      <p><input id="wyslij1" type="button" value="Zapisz swoją platformę" name='wyslij' onclick="zapisz()"/></p>
+                      <p><input id="wyslij2" type="button" value="Skasuj" name='wyslij' onclick="skasuj()"/></p>
+                      <p><input id="wyslij3" type="button" value="Wyświetl graczy na danych plaformach" name='wyslij' onclick="wyswietl()"/></p>                       
+                </form>
+                <p></p>		
+              </div>	
+      </div>
+      <div class="footer">
+        <div class="row">
+          <div class="footer-logo">
+            <img src="./images/logo-white.png" class="footer-log">
+          </div>
+          <div class="row">
+              <ul class="footer-list">
+                  <li><a href="main.html">Strona Główna</a></li>
+                  <li><a href="gry.html">Gry</a></li>
+                  <li><a href="galeria.html">Galeria</a></li>
+                  <li><a href="turnieje.html">Turnieje</a></li>
+                  <li><a href="ogloszenia.html">Ogłoszenia</a></li>
+                  <li class="last"><a href="ankieta.html">Ankieta</a></li>
+                </ul>
+          </div>
+        </div>
       </div>
     </div>
   </body>
